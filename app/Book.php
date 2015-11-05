@@ -12,4 +12,9 @@ class Book extends Model
         'year',
         'comments'
     ];
+
+    public function scopeModern($query)
+    {
+        return $query->where('year', '>=', 1900);
+    }
 }
